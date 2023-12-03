@@ -5,7 +5,6 @@ import useWeather from "../../hooks/useWeather";
 export default function LeftWeatherView() {
   const { weather, tempType } = useWeather();
 
-  console.log(weather?.main.temp);
   return (
     <Grid item xs={12} sm={12} md={7}>
       <Box p={8}>

@@ -25,7 +25,7 @@ export default function LeftWeatherContent({
       </Box>
       <DateNowDisplay />
       <ClimaticDisplay />
-      <ForecastWeather />
+      <ForecastWeather tempType={tempType} />
     </Box>
   );
 }

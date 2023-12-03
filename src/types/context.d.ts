@@ -7,7 +7,7 @@ type GlobalContextProps = {
   city?: string;
   setCity?: React.Dispatch<React.SetStateAction<string>>;
   tempType: "celsius" | "fahrenheit";
-  setTempType?: React.Dispatch<React.SetStateAction<"celsius" | "fahrenheit">>;
+  setTempType: React.Dispatch<React.SetStateAction<"celsius" | "fahrenheit">>;
 };
 
 export default GlobalContextProps;

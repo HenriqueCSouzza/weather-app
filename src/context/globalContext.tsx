@@ -8,6 +8,7 @@ import { openWeatherMock } from "../mock/weather";
 const globalContext = createContext<GlobalContextProps>({
   loading: false,
   tempType: "celsius",
+  setTempType: (type) => type
 });
 
 export default globalContext;
@@ -41,6 +42,8 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
     [weather, setWeather, loading, city, setCity, tempType, setTempType]
   );
 
+
+  console.log(tempType)
   return (
     <globalContext.Provider value={valueMemo}>
       {children}

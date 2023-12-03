@@ -1,6 +1,8 @@
-import { createTheme } from "@mui/material";
+import { Theme, createTheme } from "@mui/material";
 import typography from "./typography";
 import palette from "./palette";
-const theme = createTheme({ palette, typography });
+import MuiIconButton from "./overrides/IconButton"
+
+const theme: Theme = createTheme({ palette, typography, components: { MuiIconButton } });
 
 export default theme;
