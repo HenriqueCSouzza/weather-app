@@ -1,11 +1,11 @@
-import { Box, Grid } from "@mui/material";
-import LeftWeatherView from "./view/LeftWeatherView";
-import RightWeatherView from "./view/RightWeatherView";
+import { Box, Grid } from '@mui/material'
+import LeftWeatherView from './view/LeftWeatherView'
+import RightWeatherView from './view/RightWeatherView'
 function App() {
   return (
     <Box
       sx={{
-        background: `linear-gradient(40deg, rgba(255,150,150,1) 0%, rgba(140,107,174,1) 100%)`,
+        background: `linear-gradient(40deg, rgba(255,150,150,1) 0%, rgba(140,107,174,1) 100%)`
       }}
     >
       <Grid
@@ -13,9 +13,9 @@ function App() {
         width="100%"
         height="100%"
         flexDirection={{
-          xs: "column",
-          sm: "column",
-          md: "row",
+          xs: 'column',
+          sm: 'column',
+          md: 'row'
         }}
       >
         <LeftWeatherView />
@@ -23,7 +23,7 @@ function App() {
         <RightWeatherView />
       </Grid>
     </Box>
-  );
+  )
 }
 
-export default App;
+export default App
