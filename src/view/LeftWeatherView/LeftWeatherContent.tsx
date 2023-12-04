@@ -1,19 +1,22 @@
-import { Box } from "@mui/material";
-import { convertTemp, convertSignal } from "../../utils/convertTemp";
-import TemperatureNumber from "../../components/TemperatureNumber";
-import TemperatureUniMed from "../../components/TemperatureUniMed";
-import DateNowDisplay from "../../components/DateNowDisplay";
-import ClimaticDisplay from "../../components/ClimaticDisplay";
-import ForecastWeather from "../../components/ForecastWeather";
+import { Box } from '@mui/material'
+import { convertTemp, convertSignal } from '../../utils/convertTemp'
+import TemperatureNumber from '../../components/TemperatureNumber'
+import TemperatureUniMed from '../../components/TemperatureUniMed'
+import DateNowDisplay from '../../components/DateNowDisplay'
+import ClimaticDisplay from '../../components/ClimaticDisplay'
+import ForecastWeather from '../../components/ForecastWeather'
+import type { TemperatureAverages } from '../../utils/calculateTemperatureAverages'
 
 type LeftWeatherContentProps = {
-  tempType: "celsius" | "fahrenheit";
-  temp?: number;
-};
+  tempType: 'celsius' | 'fahrenheit'
+  temp?: number
+  forecast: TemperatureAverages[] | null
+}
 
 export default function LeftWeatherContent({
   tempType,
   temp,
+  forecast
 }: LeftWeatherContentProps) {
   return (
     <Box display="flex" flexDirection="column" gap={5}>
@@ -25,7 +28,9 @@ export default function LeftWeatherContent({
       </Box>
       <DateNowDisplay />
       <ClimaticDisplay />
-      <ForecastWeather tempType={tempType} />
+      {forecast ? (
+        <ForecastWeather tempType={tempType} items={forecast} />
+      ) : null}
     </Box>
-  );
+  )
 }

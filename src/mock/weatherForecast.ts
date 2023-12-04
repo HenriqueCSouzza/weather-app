@@ -1,5 +1,7 @@
-export const weatherForecast = {
-  cod: "200",
+import type WeatherForecast from '../types/forecast'
+
+export const weatherForecast: WeatherForecast = {
+  cod: '200',
   message: 0,
   cnt: 40,
   list: [
@@ -14,30 +16,30 @@ export const weatherForecast = {
         sea_level: 1015,
         grnd_level: 929,
         humidity: 68,
-        temp_kf: 0.13,
+        temp_kf: 0.13
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03d",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03d'
+        }
       ],
       clouds: {
-        all: 40,
+        all: 40
       },
       wind: {
         speed: 3.72,
         deg: 286,
-        gust: 5.07,
+        gust: 5.07
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-11-30 15:00:00",
+      dt_txt: '2023-11-30 15:00:00'
     },
     {
       dt: 1701367200,
@@ -50,30 +52,30 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 927,
         humidity: 60,
-        temp_kf: -1.59,
+        temp_kf: -1.59
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03d",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03d'
+        }
       ],
       clouds: {
-        all: 43,
+        all: 43
       },
       wind: {
         speed: 3.62,
         deg: 269,
-        gust: 4.97,
+        gust: 4.97
       },
       visibility: 10000,
       pop: 0.06,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-11-30 18:00:00",
+      dt_txt: '2023-11-30 18:00:00'
     },
     {
       dt: 1701378000,
@@ -86,33 +88,33 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 926,
         humidity: 62,
-        temp_kf: -0.01,
+        temp_kf: -0.01
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10d",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d'
+        }
       ],
       clouds: {
-        all: 43,
+        all: 43
       },
       wind: {
         speed: 2.19,
         deg: 173,
-        gust: 3.26,
+        gust: 3.26
       },
       visibility: 10000,
       pop: 0.47,
       rain: {
-        "3h": 0.22,
+        '3h': 0.22
       },
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-11-30 21:00:00",
+      dt_txt: '2023-11-30 21:00:00'
     },
     {
       dt: 1701388800,
@@ -125,33 +127,33 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 928,
         humidity: 86,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10n",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n'
+        }
       ],
       clouds: {
-        all: 37,
+        all: 37
       },
       wind: {
         speed: 2.73,
         deg: 150,
-        gust: 4.94,
+        gust: 4.94
       },
       visibility: 10000,
       pop: 0.54,
       rain: {
-        "3h": 0.69,
+        '3h': 0.69
       },
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-01 00:00:00",
+      dt_txt: '2023-12-01 00:00:00'
     },
     {
       dt: 1701399600,
@@ -164,33 +166,33 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 928,
         humidity: 89,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10n",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n'
+        }
       ],
       clouds: {
-        all: 26,
+        all: 26
       },
       wind: {
         speed: 1.6,
         deg: 162,
-        gust: 3.13,
+        gust: 3.13
       },
       visibility: 10000,
       pop: 0.38,
       rain: {
-        "3h": 0.74,
+        '3h': 0.74
       },
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-01 03:00:00",
+      dt_txt: '2023-12-01 03:00:00'
     },
     {
       dt: 1701410400,
@@ -203,30 +205,30 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 927,
         humidity: 95,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03n",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n'
+        }
       ],
       clouds: {
-        all: 30,
+        all: 30
       },
       wind: {
         speed: 2.03,
         deg: 157,
-        gust: 3.45,
+        gust: 3.45
       },
       visibility: 10000,
       pop: 0.22,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-01 06:00:00",
+      dt_txt: '2023-12-01 06:00:00'
     },
     {
       dt: 1701421200,
@@ -239,30 +241,30 @@ export const weatherForecast = {
         sea_level: 1014,
         grnd_level: 928,
         humidity: 89,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 804,
-          main: "Clouds",
-          description: "overcast clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'overcast clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 89,
+        all: 89
       },
       wind: {
         speed: 1.46,
         deg: 126,
-        gust: 1.95,
+        gust: 1.95
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-01 09:00:00",
+      dt_txt: '2023-12-01 09:00:00'
     },
     {
       dt: 1701432000,
@@ -275,30 +277,30 @@ export const weatherForecast = {
         sea_level: 1014,
         grnd_level: 930,
         humidity: 71,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 804,
-          main: "Clouds",
-          description: "overcast clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'overcast clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 88,
+        all: 88
       },
       wind: {
         speed: 1.82,
         deg: 126,
-        gust: 1.81,
+        gust: 1.81
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-01 12:00:00",
+      dt_txt: '2023-12-01 12:00:00'
     },
     {
       dt: 1701442800,
@@ -311,30 +313,30 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 929,
         humidity: 49,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 55,
+        all: 55
       },
       wind: {
         speed: 3,
         deg: 170,
-        gust: 2.26,
+        gust: 2.26
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-01 15:00:00",
+      dt_txt: '2023-12-01 15:00:00'
     },
     {
       dt: 1701453600,
@@ -347,30 +349,30 @@ export const weatherForecast = {
         sea_level: 1010,
         grnd_level: 928,
         humidity: 44,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 52,
+        all: 52
       },
       wind: {
         speed: 4.25,
         deg: 159,
-        gust: 3.3,
+        gust: 3.3
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-01 18:00:00",
+      dt_txt: '2023-12-01 18:00:00'
     },
     {
       dt: 1701464400,
@@ -383,30 +385,30 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 927,
         humidity: 68,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 10,
+        all: 10
       },
       wind: {
         speed: 4.91,
         deg: 148,
-        gust: 5.49,
+        gust: 5.49
       },
       visibility: 10000,
       pop: 0.01,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-01 21:00:00",
+      dt_txt: '2023-12-01 21:00:00'
     },
     {
       dt: 1701475200,
@@ -419,30 +421,30 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 928,
         humidity: 74,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01n",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01n'
+        }
       ],
       clouds: {
-        all: 7,
+        all: 7
       },
       wind: {
         speed: 2.39,
         deg: 98,
-        gust: 3.59,
+        gust: 3.59
       },
       visibility: 10000,
       pop: 0.01,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-02 00:00:00",
+      dt_txt: '2023-12-02 00:00:00'
     },
     {
       dt: 1701486000,
@@ -455,30 +457,30 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 926,
         humidity: 74,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 801,
-          main: "Clouds",
-          description: "few clouds",
-          icon: "02n",
-        },
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02n'
+        }
       ],
       clouds: {
-        all: 13,
+        all: 13
       },
       wind: {
         speed: 1.7,
         deg: 74,
-        gust: 3.61,
+        gust: 3.61
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-02 03:00:00",
+      dt_txt: '2023-12-02 03:00:00'
     },
     {
       dt: 1701496800,
@@ -491,30 +493,30 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 926,
         humidity: 77,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 801,
-          main: "Clouds",
-          description: "few clouds",
-          icon: "02n",
-        },
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02n'
+        }
       ],
       clouds: {
-        all: 11,
+        all: 11
       },
       wind: {
         speed: 1.26,
         deg: 107,
-        gust: 2.01,
+        gust: 2.01
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-02 06:00:00",
+      dt_txt: '2023-12-02 06:00:00'
     },
     {
       dt: 1701507600,
@@ -527,30 +529,30 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 927,
         humidity: 81,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 4,
+        all: 4
       },
       wind: {
         speed: 1.53,
         deg: 52,
-        gust: 2.7,
+        gust: 2.7
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-02 09:00:00",
+      dt_txt: '2023-12-02 09:00:00'
     },
     {
       dt: 1701518400,
@@ -563,30 +565,30 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 928,
         humidity: 54,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 2,
+        all: 2
       },
       wind: {
         speed: 1.07,
         deg: 27,
-        gust: 2.35,
+        gust: 2.35
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-02 12:00:00",
+      dt_txt: '2023-12-02 12:00:00'
     },
     {
       dt: 1701529200,
@@ -599,30 +601,30 @@ export const weatherForecast = {
         sea_level: 1008,
         grnd_level: 927,
         humidity: 30,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 1,
+        all: 1
       },
       wind: {
         speed: 1.52,
         deg: 240,
-        gust: 2.2,
+        gust: 2.2
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-02 15:00:00",
+      dt_txt: '2023-12-02 15:00:00'
     },
     {
       dt: 1701540000,
@@ -635,30 +637,30 @@ export const weatherForecast = {
         sea_level: 1006,
         grnd_level: 925,
         humidity: 28,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 5,
+        all: 5
       },
       wind: {
         speed: 2.14,
         deg: 241,
-        gust: 2.48,
+        gust: 2.48
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-02 18:00:00",
+      dt_txt: '2023-12-02 18:00:00'
     },
     {
       dt: 1701550800,
@@ -671,30 +673,30 @@ export const weatherForecast = {
         sea_level: 1007,
         grnd_level: 925,
         humidity: 52,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 53,
+        all: 53
       },
       wind: {
         speed: 4.52,
         deg: 161,
-        gust: 5.4,
+        gust: 5.4
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-02 21:00:00",
+      dt_txt: '2023-12-02 21:00:00'
     },
     {
       dt: 1701561600,
@@ -707,30 +709,30 @@ export const weatherForecast = {
         sea_level: 1010,
         grnd_level: 926,
         humidity: 63,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03n",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n'
+        }
       ],
       clouds: {
-        all: 46,
+        all: 46
       },
       wind: {
         speed: 2.42,
         deg: 110,
-        gust: 3.96,
+        gust: 3.96
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-03 00:00:00",
+      dt_txt: '2023-12-03 00:00:00'
     },
     {
       dt: 1701572400,
@@ -743,30 +745,30 @@ export const weatherForecast = {
         sea_level: 1010,
         grnd_level: 926,
         humidity: 67,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04n",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n'
+        }
       ],
       clouds: {
-        all: 78,
+        all: 78
       },
       wind: {
         speed: 1.49,
         deg: 71,
-        gust: 3.1,
+        gust: 3.1
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-03 03:00:00",
+      dt_txt: '2023-12-03 03:00:00'
     },
     {
       dt: 1701583200,
@@ -779,30 +781,30 @@ export const weatherForecast = {
         sea_level: 1010,
         grnd_level: 925,
         humidity: 71,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04n",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n'
+        }
       ],
       clouds: {
-        all: 58,
+        all: 58
       },
       wind: {
         speed: 2.36,
         deg: 152,
-        gust: 4.78,
+        gust: 4.78
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-03 06:00:00",
+      dt_txt: '2023-12-03 06:00:00'
     },
     {
       dt: 1701594000,
@@ -815,30 +817,30 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 926,
         humidity: 77,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 9,
+        all: 9
       },
       wind: {
         speed: 1.62,
         deg: 128,
-        gust: 3.08,
+        gust: 3.08
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-03 09:00:00",
+      dt_txt: '2023-12-03 09:00:00'
     },
     {
       dt: 1701604800,
@@ -851,30 +853,30 @@ export const weatherForecast = {
         sea_level: 1010,
         grnd_level: 927,
         humidity: 53,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 801,
-          main: "Clouds",
-          description: "few clouds",
-          icon: "02d",
-        },
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02d'
+        }
       ],
       clouds: {
-        all: 13,
+        all: 13
       },
       wind: {
         speed: 1.41,
         deg: 35,
-        gust: 2.58,
+        gust: 2.58
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-03 12:00:00",
+      dt_txt: '2023-12-03 12:00:00'
     },
     {
       dt: 1701615600,
@@ -887,30 +889,30 @@ export const weatherForecast = {
         sea_level: 1008,
         grnd_level: 926,
         humidity: 29,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 801,
-          main: "Clouds",
-          description: "few clouds",
-          icon: "02d",
-        },
+          main: 'Clouds',
+          description: 'few clouds',
+          icon: '02d'
+        }
       ],
       clouds: {
-        all: 18,
+        all: 18
       },
       wind: {
         speed: 1.11,
         deg: 205,
-        gust: 1.67,
+        gust: 1.67
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-03 15:00:00",
+      dt_txt: '2023-12-03 15:00:00'
     },
     {
       dt: 1701626400,
@@ -923,30 +925,30 @@ export const weatherForecast = {
         sea_level: 1006,
         grnd_level: 925,
         humidity: 31,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 800,
-          main: "Clear",
-          description: "clear sky",
-          icon: "01d",
-        },
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d'
+        }
       ],
       clouds: {
-        all: 9,
+        all: 9
       },
       wind: {
         speed: 3.64,
         deg: 186,
-        gust: 3.5,
+        gust: 3.5
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-03 18:00:00",
+      dt_txt: '2023-12-03 18:00:00'
     },
     {
       dt: 1701637200,
@@ -959,30 +961,30 @@ export const weatherForecast = {
         sea_level: 1008,
         grnd_level: 925,
         humidity: 62,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 51,
+        all: 51
       },
       wind: {
         speed: 5.05,
         deg: 147,
-        gust: 6.18,
+        gust: 6.18
       },
       visibility: 10000,
       pop: 0.05,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-03 21:00:00",
+      dt_txt: '2023-12-03 21:00:00'
     },
     {
       dt: 1701648000,
@@ -995,30 +997,30 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 927,
         humidity: 65,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04n",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n'
+        }
       ],
       clouds: {
-        all: 58,
+        all: 58
       },
       wind: {
         speed: 2.82,
         deg: 94,
-        gust: 4.21,
+        gust: 4.21
       },
       visibility: 10000,
       pop: 0.05,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-04 00:00:00",
+      dt_txt: '2023-12-04 00:00:00'
     },
     {
       dt: 1701658800,
@@ -1031,30 +1033,30 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 927,
         humidity: 66,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03n",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03n'
+        }
       ],
       clouds: {
-        all: 43,
+        all: 43
       },
       wind: {
         speed: 1.82,
         deg: 128,
-        gust: 3.79,
+        gust: 3.79
       },
       visibility: 10000,
       pop: 0,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-04 03:00:00",
+      dt_txt: '2023-12-04 03:00:00'
     },
     {
       dt: 1701669600,
@@ -1067,30 +1069,30 @@ export const weatherForecast = {
         sea_level: 1012,
         grnd_level: 927,
         humidity: 78,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04n",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n'
+        }
       ],
       clouds: {
-        all: 65,
+        all: 65
       },
       wind: {
         speed: 2.39,
         deg: 158,
-        gust: 3.06,
+        gust: 3.06
       },
       visibility: 10000,
       pop: 0.02,
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-04 06:00:00",
+      dt_txt: '2023-12-04 06:00:00'
     },
     {
       dt: 1701680400,
@@ -1103,30 +1105,30 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 928,
         humidity: 84,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 802,
-          main: "Clouds",
-          description: "scattered clouds",
-          icon: "03d",
-        },
+          main: 'Clouds',
+          description: 'scattered clouds',
+          icon: '03d'
+        }
       ],
       clouds: {
-        all: 38,
+        all: 38
       },
       wind: {
         speed: 2.87,
         deg: 151,
-        gust: 3.83,
+        gust: 3.83
       },
       visibility: 10000,
       pop: 0.06,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-04 09:00:00",
+      dt_txt: '2023-12-04 09:00:00'
     },
     {
       dt: 1701691200,
@@ -1139,30 +1141,30 @@ export const weatherForecast = {
         sea_level: 1014,
         grnd_level: 930,
         humidity: 66,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 63,
+        all: 63
       },
       wind: {
         speed: 3.31,
         deg: 145,
-        gust: 3.16,
+        gust: 3.16
       },
       visibility: 10000,
       pop: 0.02,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-04 12:00:00",
+      dt_txt: '2023-12-04 12:00:00'
     },
     {
       dt: 1701702000,
@@ -1175,30 +1177,30 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 929,
         humidity: 53,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 803,
-          main: "Clouds",
-          description: "broken clouds",
-          icon: "04d",
-        },
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04d'
+        }
       ],
       clouds: {
-        all: 81,
+        all: 81
       },
       wind: {
         speed: 3.97,
         deg: 155,
-        gust: 3.15,
+        gust: 3.15
       },
       visibility: 10000,
       pop: 0.05,
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-04 15:00:00",
+      dt_txt: '2023-12-04 15:00:00'
     },
     {
       dt: 1701712800,
@@ -1211,33 +1213,33 @@ export const weatherForecast = {
         sea_level: 1011,
         grnd_level: 928,
         humidity: 56,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10d",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d'
+        }
       ],
       clouds: {
-        all: 63,
+        all: 63
       },
       wind: {
         speed: 6.13,
         deg: 146,
-        gust: 4.49,
+        gust: 4.49
       },
       visibility: 10000,
       pop: 0.36,
       rain: {
-        "3h": 0.31,
+        '3h': 0.31
       },
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-04 18:00:00",
+      dt_txt: '2023-12-04 18:00:00'
     },
     {
       dt: 1701723600,
@@ -1250,33 +1252,33 @@ export const weatherForecast = {
         sea_level: 1013,
         grnd_level: 928,
         humidity: 81,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 501,
-          main: "Rain",
-          description: "moderate rain",
-          icon: "10d",
-        },
+          main: 'Rain',
+          description: 'moderate rain',
+          icon: '10d'
+        }
       ],
       clouds: {
-        all: 99,
+        all: 99
       },
       wind: {
         speed: 3.81,
         deg: 161,
-        gust: 4.71,
+        gust: 4.71
       },
       visibility: 10000,
       pop: 0.66,
       rain: {
-        "3h": 11.62,
+        '3h': 11.62
       },
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-04 21:00:00",
+      dt_txt: '2023-12-04 21:00:00'
     },
     {
       dt: 1701734400,
@@ -1289,33 +1291,33 @@ export const weatherForecast = {
         sea_level: 1015,
         grnd_level: 930,
         humidity: 83,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10n",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n'
+        }
       ],
       clouds: {
-        all: 99,
+        all: 99
       },
       wind: {
         speed: 4,
         deg: 139,
-        gust: 6.8,
+        gust: 6.8
       },
       visibility: 10000,
       pop: 0.62,
       rain: {
-        "3h": 0.38,
+        '3h': 0.38
       },
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-05 00:00:00",
+      dt_txt: '2023-12-05 00:00:00'
     },
     {
       dt: 1701745200,
@@ -1328,33 +1330,33 @@ export const weatherForecast = {
         sea_level: 1016,
         grnd_level: 930,
         humidity: 87,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10n",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n'
+        }
       ],
       clouds: {
-        all: 93,
+        all: 93
       },
       wind: {
         speed: 3.02,
         deg: 145,
-        gust: 6.39,
+        gust: 6.39
       },
       visibility: 10000,
       pop: 0.82,
       rain: {
-        "3h": 0.47,
+        '3h': 0.47
       },
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-05 03:00:00",
+      dt_txt: '2023-12-05 03:00:00'
     },
     {
       dt: 1701756000,
@@ -1367,33 +1369,33 @@ export const weatherForecast = {
         sea_level: 1015,
         grnd_level: 929,
         humidity: 91,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10n",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10n'
+        }
       ],
       clouds: {
-        all: 97,
+        all: 97
       },
       wind: {
         speed: 2.57,
         deg: 134,
-        gust: 5.37,
+        gust: 5.37
       },
       visibility: 10000,
       pop: 0.83,
       rain: {
-        "3h": 0.47,
+        '3h': 0.47
       },
       sys: {
-        pod: "n",
+        pod: 'n'
       },
-      dt_txt: "2023-12-05 06:00:00",
+      dt_txt: '2023-12-05 06:00:00'
     },
     {
       dt: 1701766800,
@@ -1406,33 +1408,33 @@ export const weatherForecast = {
         sea_level: 1016,
         grnd_level: 930,
         humidity: 89,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10d",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d'
+        }
       ],
       clouds: {
-        all: 100,
+        all: 100
       },
       wind: {
         speed: 2.22,
         deg: 105,
-        gust: 5.09,
+        gust: 5.09
       },
       visibility: 10000,
       pop: 0.31,
       rain: {
-        "3h": 0.17,
+        '3h': 0.17
       },
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-05 09:00:00",
+      dt_txt: '2023-12-05 09:00:00'
     },
     {
       dt: 1701777600,
@@ -1445,46 +1447,46 @@ export const weatherForecast = {
         sea_level: 1017,
         grnd_level: 932,
         humidity: 70,
-        temp_kf: 0,
+        temp_kf: 0
       },
       weather: [
         {
           id: 500,
-          main: "Rain",
-          description: "light rain",
-          icon: "10d",
-        },
+          main: 'Rain',
+          description: 'light rain',
+          icon: '10d'
+        }
       ],
       clouds: {
-        all: 99,
+        all: 99
       },
       wind: {
         speed: 2.55,
         deg: 89,
-        gust: 3.49,
+        gust: 3.49
       },
       visibility: 10000,
       pop: 0.34,
       rain: {
-        "3h": 0.15,
+        '3h': 0.15
       },
       sys: {
-        pod: "d",
+        pod: 'd'
       },
-      dt_txt: "2023-12-05 12:00:00",
-    },
+      dt_txt: '2023-12-05 12:00:00'
+    }
   ],
   city: {
     id: 3448439,
-    name: "São Paulo",
+    name: 'São Paulo',
     coord: {
       lat: -23.5475,
-      lon: -46.6361,
+      lon: -46.6361
     },
-    country: "BR",
+    country: 'BR',
     population: 10021295,
     timezone: -10800,
     sunrise: 1701331895,
-    sunset: 1701380342,
-  },
-};
+    sunset: 1701380342
+  }
+}

@@ -18,7 +18,8 @@ export default globalContext
 
 export function GlobalContext({ children }: { children: React.ReactNode }) {
   const [weather, setWeather] = useState<OpenWeatherProps>(openWeatherMock)
-  const [forecast, setForecast] = useState<OpenForecastWeatherProps>()
+  const [forecast, setForecast] =
+    useState<OpenForecastWeatherProps>(weatherForecast)
   const [city, setCity] = useState<string>('')
   const [tempType, setTempType] = useState<'celsius' | 'fahrenheit'>('celsius')
   const { data, isLoading: loading } = useQuery({
@@ -58,7 +59,6 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
     ]
   )
 
-  console.log(tempType)
   return (
     <globalContext.Provider value={valueMemo}>
       {children}

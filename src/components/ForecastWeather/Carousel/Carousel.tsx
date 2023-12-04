@@ -4,37 +4,14 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import BoxWeather from '../BoxWeather'
 import { iconButtonSx, containerSx, containerTranslateXSx } from './sxCarousel'
-
-type itemProps = {
-  temperature: number
-  icon:
-    | '01d'
-    | '02d'
-    | '03d'
-    | '04d'
-    | '09d'
-    | '10d'
-    | '11d'
-    | '13d'
-    | '50d'
-    | '01n'
-    | '02n'
-    | '03n'
-    | '04n'
-    | '09n'
-    | '10n'
-    | '11n'
-    | '13n'
-    | '50n'
-  day: string
-}
+import { TemperatureAverages } from '../../../utils/calculateTemperatureAverages'
 
 const CustomCarousel = ({
   items,
   itemsToShow = 3,
   tempType
 }: {
-  items: itemProps[]
+  items: TemperatureAverages[]
   itemsToShow: number
   tempType: 'celsius' | 'fahrenheit'
 }) => {
@@ -64,9 +41,9 @@ const CustomCarousel = ({
           {items.map((item, index) => (
             <BoxWeather
               key={index}
-              day={item.day}
-              icon={item.icon}
-              temperature={item.temperature}
+              day={item.dayOfWeek}
+              icon={item.icons[0]}
+              temperature={Number(item.averages[0])}
               tempType={tempType}
             />
           ))}

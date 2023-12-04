@@ -83,8 +83,8 @@ export default function BowWeather({
     <Box
       display="flex"
       flexDirection="column"
+      justifyContent="space-between"
       padding={4}
-      gap={5}
       sx={{
         width: '110px',
         height: '200px',
