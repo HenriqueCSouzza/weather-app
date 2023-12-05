@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Box, IconButton } from '@mui/material'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
@@ -8,14 +8,30 @@ import { TemperatureAverages } from '../../../utils/calculateTemperatureAverages
 
 const CustomCarousel = ({
   items,
-  itemsToShow = 3,
   tempType
 }: {
   items: TemperatureAverages[]
-  itemsToShow: number
   tempType: 'celsius' | 'fahrenheit'
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [itemsToShow, setItemsToShow] = useState<number>(0)
+
+  useEffect(() => {
+    function updateDimensions() {
+      const selectorCarouselItems = document.querySelector('#carousel-items')
+      if (selectorCarouselItems) {
+        const widthValue =
+          selectorCarouselItems.getBoundingClientRect().width - 80
+        setItemsToShow(Math.round(widthValue / (176 + 24)))
+      }
+    }
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    return () => {
+      window.removeEventListener('resize', updateDimensions)
+    }
+  }, [])
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
   }
@@ -27,7 +43,7 @@ const CustomCarousel = ({
   }
 
   return (
-    <Box display="flex" width={1} alignItems="center">
+    <Box display="flex" width={1} alignItems="center" id="carousel">
       <IconButton
         color="white"
         sx={iconButtonSx}
@@ -36,7 +52,7 @@ const CustomCarousel = ({
       >
         <ArrowBackIosNewIcon />
       </IconButton>
-      <Box sx={containerSx}>
+      <Box sx={containerSx} id="carousel-items">
         <Box sx={containerTranslateXSx(currentIndex, itemsToShow)}>
           {items.map((item, index) => (
             <BoxWeather
