@@ -16,10 +16,16 @@ export const containerSx = {
 export const containerTranslateXSx = (
   currentIndex: number,
   itemsToShow: number
-) => ({
-  zIndex: 0,
-  display: 'flex',
-  gap: 6,
-  transition: 'transform 0.3s ease',
-  transform: `translateX(-${Math.round(currentIndex * (100 / itemsToShow))}%)`
-})
+) => {
+  return {
+    zIndex: 0,
+    display: 'flex',
+    gap: 6,
+    transition: 'transform 0.3s ease',
+    transform: {
+      xs: `translateX(-${Math.round(currentIndex * (100 / itemsToShow))}%)`,
+      sm: `translateX(-${Math.floor(currentIndex * (125 / itemsToShow))}%)`,
+      md: `translateX(-${Math.floor(currentIndex * (175 / itemsToShow))}%)`
+    }
+  }
+}

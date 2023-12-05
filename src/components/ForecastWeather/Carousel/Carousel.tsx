@@ -41,7 +41,6 @@ const CustomCarousel = ({
       (prevIndex) => (prevIndex - 1 + items.length) % items.length
     )
   }
-
   return (
     <Box display="flex" width={1} alignItems="center" id="carousel">
       <IconButton
@@ -53,7 +52,7 @@ const CustomCarousel = ({
         <ArrowBackIosNewIcon />
       </IconButton>
       <Box sx={containerSx} id="carousel-items">
-        <Box sx={containerTranslateXSx(currentIndex, itemsToShow)}>
+        <Box sx={containerTranslateXSx(currentIndex, items.length)}>
           {items.map((item, index) => (
             <BoxWeather
               key={index}
