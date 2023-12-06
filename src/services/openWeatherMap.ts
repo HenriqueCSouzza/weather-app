@@ -1,11 +1,11 @@
 import axios from 'axios'
-
+import OpenForecastWeatherProps from '../types/forecast'
 type OpenWeatherLatLong = { lat: number; long: number }
 type OpenWeatherCity = { city: string }
 
 export function openWeatherApi({
   city
-}: OpenWeatherCity): Promise<unknown> | null {
+}: OpenWeatherCity): Promise<OpenForecastWeatherProps> | null {
   const encodeURL = encodeURI(
     import.meta.env.VITE_OPEN_WEATHER_API_URL +
       `?q=${city}&appid=${import.meta.env.VITE_OPEN_WEATHER_API_KEY}`

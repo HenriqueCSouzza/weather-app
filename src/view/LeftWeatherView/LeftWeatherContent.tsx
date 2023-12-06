@@ -6,28 +6,35 @@ import DateNowDisplay from '../../components/DateNowDisplay'
 import ClimaticDisplay from '../../components/ClimaticDisplay'
 import ForecastWeather from '../../components/ForecastWeather'
 import type { TemperatureAverages } from '../../utils/calculateTemperatureAverages'
+import { ForecastItem } from '../../types/forecast'
 
 type LeftWeatherContentProps = {
   tempType: 'celsius' | 'fahrenheit'
   temp?: number
   forecast: TemperatureAverages[] | null
+  weather?: ForecastItem
 }
 
 export default function LeftWeatherContent({
   tempType,
-  temp,
-  forecast
+  forecast,
+  weather
 }: LeftWeatherContentProps) {
+  console.log(weather)
   return (
     <Box display="flex" flexDirection="column" gap={5}>
       <Box width="245px" display="flex">
         <TemperatureNumber>
-          {temp ? convertTemp[tempType](temp) : 0}
+          {weather?.main.temp ? convertTemp[tempType](weather?.main.temp) : 0}
         </TemperatureNumber>
         <TemperatureUniMed>{convertSignal[tempType]}</TemperatureUniMed>
       </Box>
       <DateNowDisplay />
-      <ClimaticDisplay />
+      <ClimaticDisplay
+        drizzle={weather?.rain?.['3h']}
+        humidity={weather?.main.humidity}
+        wind={weather?.wind?.speed}
+      />
       {forecast ? (
         <ForecastWeather tempType={tempType} items={forecast} />
       ) : null}

@@ -3,12 +3,18 @@ import LeftWeatherView from './view/LeftWeatherView'
 import RightWeatherView from './view/RightWeatherView'
 function App() {
   return (
-    <Box
-      sx={{
-        background: `linear-gradient(40deg, rgba(255,150,150,1) 0%, rgba(140,107,174,1) 100%)`
-      }}
-    >
-      <Grid container width="100%" height="100%" flexDirection="row">
+    <Box>
+      <Grid
+        container
+        flexDirection="row"
+        sx={{
+          background: {
+            xs: `linear-gradient(90deg, rgba(240,181,206,1) 0%, rgba(140,107,174,1) 100%)`,
+            sm: `linear-gradient(151deg, rgba(240,181,206,1) 0%, rgba(140,107,174,1) 100%)`,
+            md: `linear-gradient(22deg, rgba(240,181,206,1) 0%, rgba(140,107,174,1) 100%)`
+          }
+        }}
+      >
         <LeftWeatherView />
         <RightWeatherView />
       </Grid>

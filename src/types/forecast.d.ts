@@ -66,9 +66,9 @@ interface City {
 }
 
 interface Rain {
-  [key: string]: number
+  '3h': number
 }
-interface ForecastItem {
+export interface ForecastItem {
   dt: number
   main: Main
   weather: Weather[]

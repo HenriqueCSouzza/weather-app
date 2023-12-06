@@ -10,11 +10,11 @@ export default function LeftWeatherView() {
   console.log(weather)
   return (
     <Grid item xs={12} sm={12} md={7}>
-      <Box p={8} id="left-weather-view">
+      <Box p={4} id="left-weather-view">
         <LeftWeatherHeader icon={weather?.weather[0].icon} />
         <LeftWeatherContent
           tempType={tempType}
-          temp={weather?.main.temp}
+          weather={weather}
           forecast={weatherForecast}
         />
       </Box>
