@@ -15,7 +15,7 @@ export default function LeftWeatherHeader({ icon }: LeftWeatherHeaderProps) {
       display="flex"
       flexDirection="row"
       justifyContent="space-between"
-      minHeight="100px"
+      minHeight="133px"
       mb={3}
     >
       <Box>

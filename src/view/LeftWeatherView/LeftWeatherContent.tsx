@@ -35,9 +35,7 @@ export default function LeftWeatherContent({
         humidity={weather?.main.humidity}
         wind={weather?.wind?.speed}
       />
-      {forecast ? (
-        <ForecastWeather tempType={tempType} items={forecast} />
-      ) : null}
+      <ForecastWeather tempType={tempType} items={forecast} />
     </Box>
   )
 }
