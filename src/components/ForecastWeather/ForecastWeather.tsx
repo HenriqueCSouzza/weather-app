@@ -15,7 +15,7 @@ export default function ForecastWeather({
 
   return (
     <Box display="flex" gap={9}>
-      <CustomCarousel items={items} itemsToShow={3} tempType={tempType} />
+      <CustomCarousel items={items} tempType={tempType} />
     </Box>
   )
 }
