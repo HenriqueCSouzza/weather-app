@@ -35,7 +35,7 @@ const LocationInput = ({
             fullWidth
             onChange={handleChange}
           />
-          <IconButton onClick={handleVisibleClick}>
+          <IconButton onClick={handleVisibleClick} disableRipple>
             <Close
               color="white"
               sx={{
@@ -46,7 +46,10 @@ const LocationInput = ({
         </>
       ) : null}
 
-      <IconButton onClick={visibility ? submitText : handleVisibleClick}>
+      <IconButton
+        onClick={visibility ? submitText : handleVisibleClick}
+        disableRipple
+      >
         <SearchIcon
           color="white"
           sx={{
