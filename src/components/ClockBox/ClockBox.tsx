@@ -9,10 +9,8 @@ export default function ClockBox({
   title: string
   hourBegin?: string
   hourEnd?: string
-  dt?: number
+  dt: Date
 }) {
-  const dtFormat = dt ? dt * 1000 : 0
-
   return (
     <Box
       display="flex"
@@ -41,7 +39,7 @@ export default function ClockBox({
           height: 300
         }}
       >
-        <Clock dt={dtFormat} />
+        <Clock dt={dt} />
         <Box
           sx={{
             textAlign: 'center',

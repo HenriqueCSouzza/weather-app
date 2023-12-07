@@ -20,9 +20,8 @@ export default function LeftWeatherContent({
   forecast,
   weather
 }: LeftWeatherContentProps) {
-  console.log(weather)
   return (
-    <Box display="flex" flexDirection="column" gap={5}>
+    <Box display="flex" flexDirection="column" gap={4}>
       <Box width="245px" display="flex">
         <TemperatureNumber>
           {weather?.main.temp ? convertTemp[tempType](weather?.main.temp) : 0}

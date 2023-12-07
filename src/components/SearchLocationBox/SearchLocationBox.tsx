@@ -34,7 +34,7 @@ export default function SearchLocationBox({
                 color: '#FFF',
                 textShadow: '-1.51px 2.26px 0.75px rgba(0, 0, 0, 0.10)',
                 fontFamily: 'Inter Variable',
-                fontSize: '32px',
+                fontSize: { xs: '28px', sm: '32px', md: '32px' },
                 fontStyle: 'normal',
                 fontWeight: 300,
                 lineHeight: 1.2
@@ -45,11 +45,13 @@ export default function SearchLocationBox({
           </Box>
         </>
       ) : null}
-      <LocationInput
-        handleVisibleClick={handleVisibleClick}
-        visibility={isInputVisible}
-        setText={setCity}
-      />
+      <Box display={{ xs: 'none', sm: 'none', md: 'inherit' }}>
+        <LocationInput
+          handleVisibleClick={handleVisibleClick}
+          visibility={isInputVisible}
+          setText={setCity}
+        />
+      </Box>
     </Box>
   )
 }
