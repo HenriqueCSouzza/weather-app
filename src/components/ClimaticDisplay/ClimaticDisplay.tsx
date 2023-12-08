@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
-import DrizzleSVG from '../../assets/drizzle-icon.svg'
-import HumiditySVG from '../../assets/hum-icon.svg'
-import WindSVG from '../../assets/wind-direction-icon.svg'
+import DrizzleSVG from './icons/drizzle-icon.svg'
+import HumiditySVG from './icons/hum-icon.svg'
+import WindSVG from './icons/wind-direction-icon.svg'
 import { sxContainer } from './sxClimaticDisplay'
 
 const WindLabel = ({ wind }: { wind?: number }) => (
