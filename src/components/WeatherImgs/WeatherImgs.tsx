@@ -33,7 +33,7 @@ export default function WeatherImages({
     const loadImage = async () => {
       if (icon) {
         try {
-          const { default: imgSrc } = await import(`../../assets/${icon}.png`)
+          const { default: imgSrc } = await import(`./imgs/${icon}.png`)
           setImageSrc(imgSrc)
         } catch (error) {
           console.error('Erro ao carregar a imagem:', error)
