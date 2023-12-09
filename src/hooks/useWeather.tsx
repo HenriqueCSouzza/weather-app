@@ -5,25 +5,25 @@ import globalContext from '../context/globalContext'
 export default function useWeather(): GlobalContextProps {
   const {
     weather,
-    setWeather,
     loading,
     city,
     setCity,
     setTempType,
     tempType,
     forecast,
-    setForecast
+    airQuality,
+    sunriseSunset
   } = useContext<GlobalContextProps>(globalContext)
 
   return {
     weather,
-    setWeather,
     loading,
     city,
     setCity,
     setTempType,
     tempType,
     forecast,
-    setForecast
+    airQuality,
+    sunriseSunset
   }
 }

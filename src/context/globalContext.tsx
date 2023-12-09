@@ -1,8 +1,10 @@
 import { createContext, useMemo, useState, useEffect } from 'react'
 import GlobalContextProps from '../types/context'
 import OpenForecastWeatherProps, { ForecastItem } from '../types/forecast'
-import { openWeatherApi } from '../services/openWeatherMap'
+import { openWeatherApi, OpenWeatherApi } from '../services/openWeatherMap'
 import { useQuery } from '@tanstack/react-query'
+import { AirQualityType } from '../types/airQuality'
+import { SunsetSunriseAPI } from '../types/sunriseSunset'
 const globalContext = createContext<GlobalContextProps>({
   loading: false,
   tempType: 'celsius',
@@ -14,6 +16,8 @@ export default globalContext
 export function GlobalContext({ children }: { children: React.ReactNode }) {
   const [weather, setWeather] = useState<ForecastItem>()
   const [forecast, setForecast] = useState<OpenForecastWeatherProps>()
+  const [sunriseSunset, setSunriseSunset] = useState<SunsetSunriseAPI>()
+  const [airQuality, setAirQuality] = useState<AirQualityType>()
   const [city, setCity] = useState<string>('')
   const [tempType, setTempType] = useState<'celsius' | 'fahrenheit'>('celsius')
   const { data, isLoading: loading } = useQuery({
@@ -22,10 +26,20 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
     enabled: !!city
   })
 
+  console.log(sunriseSunset)
   useEffect(() => {
-    if (data as OpenForecastWeatherProps) {
-      setForecast(data as OpenForecastWeatherProps)
-      setWeather(data?.list[0])
+    if (data as OpenWeatherApi) {
+      if (data?.forecast) {
+        setForecast(data?.forecast)
+        setWeather(data?.forecast?.list[0])
+      }
+      if (data?.airQuality) {
+        setAirQuality(data?.airQuality)
+      }
+
+      if (data?.sunriseSunset) {
+        setSunriseSunset(data?.sunriseSunset)
+      }
     }
   }, [data])
 
@@ -39,19 +53,10 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
       tempType,
       setTempType,
       forecast,
-      setForecast
+      sunriseSunset,
+      airQuality
     }),
-    [
-      weather,
-      setWeather,
-      loading,
-      city,
-      setCity,
-      tempType,
-      setTempType,
-      forecast,
-      setForecast
-    ]
+    [weather, loading, city, tempType, forecast, sunriseSunset, airQuality]
   )
 
   return (

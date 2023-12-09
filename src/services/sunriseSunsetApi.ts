@@ -1,24 +1,8 @@
 import axios from 'axios'
+import { SunsetSunriseAPI } from '../types/sunriseSunset'
 type SunriseSunsetLatLongAPI = { lat: number; long: number }
-type Results = {
-  sunrise: string
-  sunset: string
-  solar_noon: string
-  day_length: string
-  civil_twilight_begin: string
-  civil_twilight_end: string
-  nautical_twilight_begin: string
-  nautical_twilight_end: string
-  astronomical_twilight_begin: string
-  astronomical_twilight_end: string
-}
 
-type SunsetSunriseAPI = {
-  results: Results
-  status: string
-  tzId: string
-}
-export function openWeatherLatLongApi({
+export function sunriseSunsetLatLongApi({
   lat,
   long
 }: SunriseSunsetLatLongAPI): Promise<SunsetSunriseAPI> {

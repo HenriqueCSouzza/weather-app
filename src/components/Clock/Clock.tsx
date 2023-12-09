@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 
-const Clock = ({ dt }: { dt: Date }) => {
+const Clock = ({ dt }: { dt?: Date }) => {
   const [seconds, setSeconds] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [hours, setHours] = useState(0)
 
   useEffect(() => {
     const now = dt
-
-    setSeconds(now.getSeconds() * 6)
-    setMinutes(now.getMinutes() * 6)
-    setHours(((now.getHours() % 12) + now.getMinutes() / 60) * 30)
+    if (now) {
+      setSeconds(now.getSeconds() * 6)
+      setMinutes(now.getMinutes() * 6)
+      setHours(((now.getHours() % 12) + now.getMinutes() / 60) * 30)
+    }
   }, [dt])
 
   return (

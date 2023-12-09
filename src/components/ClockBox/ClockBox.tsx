@@ -9,7 +9,7 @@ export default function ClockBox({
   title: string
   hourBegin?: string
   hourEnd?: string
-  dt: Date
+  dt?: Date
 }) {
   return (
     <Box

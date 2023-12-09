@@ -14,7 +14,6 @@ const StyledSwitch = styled(Switch)(({ theme }) => ({
       transform: 'translateX(22px)',
       '& .MuiSwitch-thumb:before': {
         content: "'ºF'",
-        'aria-label': 'Fahrenheit',
         role: 'switch'
       },
       '& + .MuiSwitch-track': {
@@ -34,7 +33,6 @@ const StyledSwitch = styled(Switch)(({ theme }) => ({
       height: '100%',
       left: 5,
       top: 5,
-      'aria-label': 'Celsius',
       role: 'switch'
     }
   },
