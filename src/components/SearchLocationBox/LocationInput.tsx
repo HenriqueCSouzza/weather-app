@@ -34,8 +34,14 @@ const LocationInput = ({
             }}
             fullWidth
             onChange={handleChange}
+            aria-label="Type your location"
+            role="search"
           />
-          <IconButton onClick={handleVisibleClick} disableRipple>
+          <IconButton
+            onClick={handleVisibleClick}
+            disableRipple
+            aria-label="Close search"
+          >
             <Close
               color="white"
               sx={{
@@ -49,6 +55,7 @@ const LocationInput = ({
       <IconButton
         onClick={visibility ? submitText : handleVisibleClick}
         disableRipple
+        aria-label="Submit search"
       >
         <SearchIcon
           color="white"

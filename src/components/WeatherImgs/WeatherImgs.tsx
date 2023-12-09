@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { weatherObject } from './imgs'
 
 type WeatherImages = {
   icon?:
@@ -27,22 +27,7 @@ export default function WeatherImages({
   icon,
   width = '143px'
 }: WeatherImages) {
-  const [imageSrc, setImageSrc] = useState<string | null>(null)
-
-  useEffect(() => {
-    const loadImage = async () => {
-      if (icon) {
-        try {
-          const { default: imgSrc } = await import(`./imgs/${icon}.png`)
-          setImageSrc(imgSrc)
-        } catch (error) {
-          console.error('Erro ao carregar a imagem:', error)
-        }
-      }
-    }
-
-    loadImage()
-  }, [icon])
-
-  return imageSrc ? <img src={imageSrc} width={width} /> : null
+  return icon ? (
+    <img src={weatherObject[icon]} width={width} alt="WeatherImage" />
+  ) : null
 }

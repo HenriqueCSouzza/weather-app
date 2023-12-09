@@ -16,12 +16,18 @@ export default function LeftWeatherHeader({ icon }: LeftWeatherHeaderProps) {
       flexDirection="row"
       justifyContent="space-between"
       minHeight="133px"
+      aria-label="Weather information"
+      role="region"
       mb={3}
     >
       <Box>
-        <WeatherImgs icon={icon} />
+        <WeatherImgs
+          icon={icon}
+          aria-label="Weather icon representing the current weather"
+        />
       </Box>
       <TemperatureSwitch
+        aria-label="Switch between Celsius and Fahrenheit temperatures"
         onChange={(e) => {
           const { target } = e
 

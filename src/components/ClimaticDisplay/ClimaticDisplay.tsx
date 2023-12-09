@@ -10,7 +10,7 @@ const WindLabel = ({ wind }: { wind?: number }) => (
     sx={{ borderRight: { md: '1px solid white' }, paddingRight: 3 }}
     gap="21px"
   >
-    <img src={WindSVG} />
+    <img src={WindSVG} alt="wind image" />
     <Typography>Wind</Typography>
     <Typography>{wind} km/h</Typography>
   </Box>
@@ -21,14 +21,14 @@ const HumLabel = ({ humidity }: { humidity?: number }) => (
     sx={{ borderRight: { md: '1px solid white' }, paddingRight: 3 }}
     gap="21px"
   >
-    <img src={HumiditySVG} />
+    <img src={HumiditySVG} alt="humidity image" />
     <Typography>Hum</Typography>
     <Typography>{humidity} %</Typography>
   </Box>
 )
 const DrizzleLabel = ({ drizzle }: { drizzle?: number }) => (
   <Box display="flex" gap="21px">
-    <img src={DrizzleSVG} />
+    <img src={DrizzleSVG} alt="drizzle image" />
     <Typography>Rain</Typography>
     <Typography>{drizzle} %</Typography>
   </Box>

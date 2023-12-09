@@ -19,8 +19,9 @@ export default function SearchLocationBox({
 
   return (
     <Box
-      display="flex"
+      width="100%"
       height="64px"
+      display="flex"
       alignItems="center"
       justifyContent="space-between"
     >
@@ -45,7 +46,7 @@ export default function SearchLocationBox({
           </Box>
         </>
       ) : null}
-      <Box display={{ xs: 'none', sm: 'none', md: 'inherit' }}>
+      <Box width="100%" display="flex" justifyContent="flex-end">
         <LocationInput
           handleVisibleClick={handleVisibleClick}
           visibility={isInputVisible}
