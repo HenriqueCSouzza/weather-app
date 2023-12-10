@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { SunsetSunriseAPI } from '../types/sunriseSunset'
-type SunriseSunsetLatLongAPI = { lat: number; long: number }
+type SunriseSunsetLatLongAPI = { lat?: number; long?: number }
 
 export function sunriseSunsetLatLongApi({
   lat,

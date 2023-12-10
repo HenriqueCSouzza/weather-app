@@ -1,10 +1,15 @@
 import { createContext, useMemo, useState, useEffect } from 'react'
 import GlobalContextProps from '../types/context'
 import OpenForecastWeatherProps, { ForecastItem } from '../types/forecast'
-import { openWeatherApi, OpenWeatherApi } from '../services/openWeatherMap'
-import { useQuery } from '@tanstack/react-query'
+import {
+  openWeatherAirQualityApi,
+  openWeatherApi,
+  OpenWeatherApi
+} from '../services/openWeatherMap'
+import { useQuery, useQueries } from '@tanstack/react-query'
 import { AirQualityType } from '../types/airQuality'
 import { SunsetSunriseAPI } from '../types/sunriseSunset'
+import { sunriseSunsetLatLongApi } from '../services/sunriseSunsetApi'
 const globalContext = createContext<GlobalContextProps>({
   loading: false,
   tempType: 'celsius',
@@ -25,23 +30,54 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
     queryFn: ({ queryKey }) => openWeatherApi({ city: queryKey[1] }),
     enabled: !!city
   })
+  const lat = forecast?.city.coord.lat
+  const lon = forecast?.city.coord.lon
+  const [air, sunset] = useQueries({
+    queries: [
+      {
+        queryKey: ['airQuality', lat, lon],
+        queryFn: () =>
+          openWeatherAirQualityApi({
+            lat: lat,
+            long: lon
+          }),
+        enabled: !!forecast,
+        throwOnError: (error: Error) => {
+          console.error('Ocorreu um erro na query:', error)
+          return false
+        }
+      },
+      {
+        queryKey: ['sunriseSunset', lat, lon],
+        queryFn: () =>
+          sunriseSunsetLatLongApi({
+            lat: lat,
+            long: lon
+          }),
+        enabled: !!forecast,
+        throwOnError: (error: Error) => {
+          console.error('Ocorreu um erro na query:', error)
+          return false
+        }
+      }
+    ]
+  })
 
-  console.log(sunriseSunset)
+  console.log(air, sunset)
   useEffect(() => {
     if (data as OpenWeatherApi) {
       if (data?.forecast) {
         setForecast(data?.forecast)
         setWeather(data?.forecast?.list[0])
       }
-      if (data?.airQuality) {
-        setAirQuality(data?.airQuality)
-      }
-
-      if (data?.sunriseSunset) {
-        setSunriseSunset(data?.sunriseSunset)
-      }
     }
-  }, [data])
+    if (air) {
+      setAirQuality(air.data)
+    }
+    if (sunset) {
+      setSunriseSunset(sunset.data)
+    }
+  }, [air, data, sunset])
 
   const valueMemo = useMemo<GlobalContextProps>(
     () => ({

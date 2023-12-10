@@ -1,15 +1,11 @@
 import axios from 'axios'
 import OpenForecastWeatherProps from '../types/forecast'
-import { SunsetSunriseAPI } from '../types/sunriseSunset'
 import { AirQualityType } from '../types/airQuality'
-import { sunriseSunsetLatLongApi } from './sunriseSunsetApi'
-type OpenWeatherLatLong = { lat: number; long: number }
+type OpenWeatherLatLong = { lat?: number; long?: number }
 type OpenWeatherCity = { city: string }
 
 export type OpenWeatherApi = Promise<{
   forecast: OpenForecastWeatherProps
-  airQuality: AirQualityType
-  sunriseSunset: SunsetSunriseAPI
 }> | null
 
 export function openWeatherApi({ city }: OpenWeatherCity): OpenWeatherApi {
@@ -25,21 +21,8 @@ export function openWeatherApi({ city }: OpenWeatherCity): OpenWeatherApi {
   return axios
     .get(encodeURL)
     .then(async ({ data }: { data: OpenForecastWeatherProps }) => {
-      const response = await Promise.all([
-        openWeatherAirQualityApi({
-          lat: data.city.coord.lat,
-          long: data.city.coord.lon
-        }),
-        sunriseSunsetLatLongApi({
-          lat: data.city.coord.lat,
-          long: data.city.coord.lon
-        })
-      ])
-
       return {
-        forecast: data,
-        airQuality: response[0],
-        sunriseSunset: response[1]
+        forecast: data
       }
     })
 }
