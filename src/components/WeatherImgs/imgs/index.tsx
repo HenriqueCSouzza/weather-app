@@ -1,3 +1,21 @@
+import Image01d from './01d.png'
+import Image02d from './02d.png'
+import Image03d from './03d.png'
+import Image04d from './04d.png'
+import Image09d from './09d.png'
+import Image10d from './10d.png'
+import Image11d from './11d.png'
+import Image13d from './13d.png'
+import Image50d from './501d.png'
+import Image01n from './01n.png'
+import Image02n from './02n.png'
+import Image03n from './03n.png'
+import Image04n from './04n.png'
+import Image09n from './09n.png'
+import Image10n from './10n.png'
+import Image11n from './11n.png'
+import Image13n from './13n.png'
+import Image50n from './501n.png'
 type WeatherType =
   | '01d'
   | '02d'
@@ -23,22 +41,22 @@ type WeatherObject = {
 }
 
 export const weatherObject: WeatherObject = {
-  '01d': '/src/components/WeatherImgs/imgs/01d.png',
-  '02d': '/src/components/WeatherImgs/imgs/02d.png',
-  '03d': '/src/components/WeatherImgs/imgs/03d.png',
-  '04d': '/src/components/WeatherImgs/imgs/04d.png',
-  '09d': '/src/components/WeatherImgs/imgs/09d.png',
-  '10d': '/src/components/WeatherImgs/imgs/10d.png',
-  '11d': '/src/components/WeatherImgs/imgs/11d.png',
-  '13d': '/src/components/WeatherImgs/imgs/13d.png',
-  '50d': '/src/components/WeatherImgs/imgs/50d.png',
-  '01n': '/src/components/WeatherImgs/imgs/01n.png',
-  '02n': '/src/components/WeatherImgs/imgs/02n.png',
-  '03n': '/src/components/WeatherImgs/imgs/03n.png',
-  '04n': '/src/components/WeatherImgs/imgs/04n.png',
-  '09n': '/src/components/WeatherImgs/imgs/09n.png',
-  '10n': '/src/components/WeatherImgs/imgs/10n.png',
-  '11n': '/src/components/WeatherImgs/imgs/11n.png',
-  '13n': '/src/components/WeatherImgs/imgs/13n.png',
-  '50n': '/src/components/WeatherImgs/imgs/50n.png'
+  '01d': Image01d,
+  '02d': Image02d,
+  '03d': Image03d,
+  '04d': Image04d,
+  '09d': Image09d,
+  '10d': Image10d,
+  '11d': Image11d,
+  '13d': Image13d,
+  '50d': Image50d,
+  '01n': Image01n,
+  '02n': Image02n,
+  '03n': Image03n,
+  '04n': Image04n,
+  '09n': Image09n,
+  '10n': Image10n,
+  '11n': Image11n,
+  '13n': Image13n,
+  '50n': Image50n
 }
