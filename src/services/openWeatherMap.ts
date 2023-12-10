@@ -32,7 +32,7 @@ export function openWeatherAirQualityApi({
   long
 }: OpenWeatherLatLong): Promise<AirQualityType> {
   const encodeURL = encodeURI(
-    `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${
       import.meta.env.VITE_AIR_QUALITY_API_KEY
     }`
   )
