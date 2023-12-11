@@ -3,10 +3,12 @@ import SearchLocationBox from '.'
 type SearchLocationType = {
   city?: string
   setCity?: React.Dispatch<React.SetStateAction<string>>
+  name?: string
 }
 export default function MobileSearchLocation({
   city,
-  setCity
+  setCity,
+  name
 }: SearchLocationType) {
   return (
     <Box
@@ -19,7 +21,7 @@ export default function MobileSearchLocation({
       zIndex={2}
       mb={3}
     >
-      <SearchLocationBox city={city} setCity={setCity} />
+      <SearchLocationBox city={city} setCity={setCity} name={name} />
     </Box>
   )
 }

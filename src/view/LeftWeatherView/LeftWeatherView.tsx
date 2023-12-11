@@ -13,7 +13,11 @@ export default function LeftWeatherView() {
     <>
       <Grid item xs={12} sm={12} md={7}>
         <Box p={4}>
-          <MobileSearchLocation city={city} setCity={setCity} />
+          <MobileSearchLocation
+            city={city}
+            setCity={setCity}
+            name={forecast?.city.name}
+          />
           <LeftWeatherHeader icon={weather?.weather[0].icon} />
           <LeftWeatherContent
             tempType={tempType}
