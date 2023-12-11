@@ -36,6 +36,7 @@ const LocationInput = ({
             onChange={handleChange}
             aria-label="Type your location"
             role="search"
+            placeholder="City,State,Country"
           />
           <IconButton
             onClick={handleVisibleClick}

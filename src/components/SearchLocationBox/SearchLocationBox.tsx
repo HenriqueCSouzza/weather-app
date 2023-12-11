@@ -6,10 +6,12 @@ import { useState } from 'react'
 type SearchLocationType = {
   city?: string
   setCity?: React.Dispatch<React.SetStateAction<string>>
+  name?: string
 }
 export default function SearchLocationBox({
   city,
-  setCity
+  setCity,
+  name
 }: SearchLocationType) {
   const [isInputVisible, setIsInputVisible] = useState(false)
 
@@ -42,7 +44,7 @@ export default function SearchLocationBox({
               }
             }}
           >
-            <Typography>{city}</Typography>
+            <Typography>{name || city}</Typography>
           </Box>
         </>
       ) : null}

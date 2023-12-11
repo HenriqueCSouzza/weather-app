@@ -1,15 +1,17 @@
 import { createContext, useMemo, useState, useEffect } from 'react'
-import GlobalContextProps from '../types/context'
-import OpenForecastWeatherProps, { ForecastItem } from '../types/forecast'
+import { useQuery, useQueries } from '@tanstack/react-query'
+import useGeolocation, { GeolocationData } from '../hooks/useGeolocation'
 import {
   openWeatherAirQualityApi,
+  openWeatherLatLongApi,
   openWeatherApi,
   OpenWeatherApi
 } from '../services/openWeatherMap'
-import { useQuery, useQueries } from '@tanstack/react-query'
+import { sunriseSunsetLatLongApi } from '../services/sunriseSunsetApi'
+import OpenForecastWeatherProps, { ForecastItem } from '../types/forecast'
+import GlobalContextProps from '../types/context'
 import { AirQualityType } from '../types/airQuality'
 import { SunsetSunriseAPI } from '../types/sunriseSunset'
-import { sunriseSunsetLatLongApi } from '../services/sunriseSunsetApi'
 const globalContext = createContext<GlobalContextProps>({
   loading: false,
   tempType: 'celsius',
@@ -25,13 +27,17 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
   const [airQuality, setAirQuality] = useState<AirQualityType>()
   const [city, setCity] = useState<string>('')
   const [tempType, setTempType] = useState<'celsius' | 'fahrenheit'>('celsius')
+  const { location } = useGeolocation()
   const { data, isLoading: loading } = useQuery({
     queryKey: ['weather', city],
     queryFn: ({ queryKey }) => openWeatherApi({ city: queryKey[1] }),
     enabled: !!city
   })
-  const lat = forecast?.city.coord.lat
-  const lon = forecast?.city.coord.lon
+  const lat = forecast?.city?.coord?.lat
+  const lon = forecast?.city?.coord?.lon
+
+  useEffect(() => {}, [])
+
   const [air, sunset] = useQueries({
     queries: [
       {
@@ -63,7 +69,29 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
     ]
   })
 
-  console.log(air, sunset)
+  async function runForecast(location: GeolocationData) {
+    try {
+      const data = await openWeatherLatLongApi({
+        lat: location.latitude,
+        long: location.longitude
+      })
+
+      if (data) {
+        console.log({ data })
+        setForecast(data)
+        setWeather(data?.list[0])
+      }
+    } catch (error) {
+      console.error('Error fetching forecast:', error)
+    }
+  }
+
+  useEffect(() => {
+    if (location.latitude !== null && location.longitude !== null) {
+      runForecast(location)
+    }
+  }, [location.error, location.latitude, location.longitude])
+
   useEffect(() => {
     if (data as OpenWeatherApi) {
       if (data?.forecast) {
