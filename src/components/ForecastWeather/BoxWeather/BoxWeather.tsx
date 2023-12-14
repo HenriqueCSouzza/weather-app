@@ -1,8 +1,10 @@
 import { Box, Typography } from '@mui/material'
+import StraightIcon from '@mui/icons-material/Straight'
 import { convertTemp, convertSignal } from '../../../utils/convertTemp'
 import WeatherImgs from '../../WeatherImgs'
 
 type BoxWeatherProps = {
+  temperatureAverages: number[]
   temperature: number
   tempType: 'celsius' | 'fahrenheit'
   icon:
@@ -29,28 +31,38 @@ type BoxWeatherProps = {
 
 const Temperature = ({
   temperature,
-  tempType
+  tempType,
+  minMax
 }: {
   temperature: number
   tempType: 'celsius' | 'fahrenheit'
+  minMax: 'min' | 'max'
 }) => (
   <Box
     sx={{
-      filter:
-        'drop-shadow(-4.510000228881836px 2.259999990463257px 0.75px rgba(0, 0, 0, 0.15))',
+      display: 'flex',
+      alignItems: 'center',
+
       '.MuiTypography-body1': {
         color: ' #FFF',
         textAlign: 'center',
         textShadow: '-1.139px 1.708px 0.569px rgba(0, 0, 0, 0.10)',
-        fontSize: '24px',
+        fontSize: '14px',
         fontStyle: 'normal',
         fontWeight: 400,
         lineHeight: 'normal'
       }
     }}
   >
+    <StraightIcon
+      color="white"
+      sx={{
+        fontSize: '14px',
+        transform: minMax === 'min' ? 'rotate(180deg)' : 'inherit'
+      }}
+    />
     <Typography>
-      {convertTemp[tempType](temperature) + ' ' + convertSignal[tempType]}
+      {convertTemp[tempType](temperature) + ' ' + convertSignal[tempType]}{' '}
     </Typography>
   </Box>
 )
@@ -74,11 +86,14 @@ const WeekDay = ({ day }: { day: string }) => (
   </Box>
 )
 export default function BowWeather({
-  temperature,
   tempType,
   icon,
-  day
+  day,
+  temperatureAverages
 }: BoxWeatherProps) {
+  const min = Math.min(...temperatureAverages)
+  const max = Math.max(...temperatureAverages)
+
   return (
     <Box
       display="flex"
@@ -94,7 +109,16 @@ export default function BowWeather({
         background: 'rgba(255, 255, 255, 0.20)'
       }}
     >
-      <Temperature temperature={temperature} tempType={tempType} />
+      <Box
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Temperature temperature={max} tempType={tempType} minMax="max" />
+        <Temperature temperature={min} tempType={tempType} minMax="min" />
+      </Box>
       <Box display="flex" justifyContent="center">
         <WeatherImgs icon={icon} width="70px" />
       </Box>

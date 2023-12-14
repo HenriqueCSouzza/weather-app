@@ -60,6 +60,7 @@ const CustomCarousel = ({
               icon={item.icons[0]}
               temperature={Number(item.averages[0])}
               tempType={tempType}
+              temperatureAverages={item.averages}
             />
           ))}
         </Box>
