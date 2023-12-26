@@ -19,6 +19,7 @@ export default function SearchLocationBox({
     setIsInputVisible(() => !isInputVisible)
   }
 
+  console.log(isInputVisible)
   return (
     <Box
       width="100%"
@@ -44,7 +45,7 @@ export default function SearchLocationBox({
               }
             }}
           >
-            <Typography>{name || city}</Typography>
+            <Typography data-testid="label-search">{name || city}</Typography>
           </Box>
         </>
       ) : null}

@@ -12,7 +12,8 @@ export default function useWeather(): GlobalContextProps {
     tempType,
     forecast,
     airQuality,
-    sunriseSunset
+    sunriseSunset,
+    error
   } = useContext<GlobalContextProps>(globalContext)
 
   return {
@@ -24,6 +25,7 @@ export default function useWeather(): GlobalContextProps {
     tempType,
     forecast,
     airQuality,
-    sunriseSunset
+    sunriseSunset,
+    error
   }
 }

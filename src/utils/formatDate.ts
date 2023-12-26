@@ -12,11 +12,10 @@ export function parseTimeString(timeString: string) {
     Number(seconds)
   )
   console.log(formattedTime, parsedDate)
-  // Verifica se a data é válida antes de retorná-la
   if (!isNaN(parsedDate.getTime())) {
     return parsedDate
   } else {
-    console.log('Data inválida')
+    console.error('Data inválida')
     return new Date()
   }
 }

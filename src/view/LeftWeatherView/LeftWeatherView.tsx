@@ -8,7 +8,6 @@ export default function LeftWeatherView() {
   const { weather, tempType, forecast, city, setCity } = useWeather()
 
   const weatherForecast = calculateTemperatureAverages(forecast)
-
   return (
     <>
       <Grid item xs={12} sm={12} md={7}>

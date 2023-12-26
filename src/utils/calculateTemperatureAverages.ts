@@ -45,12 +45,6 @@ export default function calculateTemperatureAverages(
       weekday: 'short'
     }).format(dateTime)
 
-    console.log({
-      dayOfWeek,
-      date,
-      averages: temps,
-      icons
-    })
     temperatureAverages.push({
       dayOfWeek,
       date,

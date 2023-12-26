@@ -36,8 +36,6 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
   const lat = forecast?.city?.coord?.lat
   const lon = forecast?.city?.coord?.lon
 
-  useEffect(() => {}, [])
-
   const [air, sunset] = useQueries({
     queries: [
       {

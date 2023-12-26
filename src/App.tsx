@@ -3,7 +3,7 @@ import LeftWeatherView from './view/LeftWeatherView'
 import RightWeatherView from './view/RightWeatherView'
 function App() {
   return (
-    <Box>
+    <Box height="100%">
       <Grid
         container
         flexDirection="row"

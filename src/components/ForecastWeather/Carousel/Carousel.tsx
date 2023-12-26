@@ -42,7 +42,13 @@ const CustomCarousel = ({
     )
   }
   return (
-    <Box display="flex" width={1} alignItems="center" id="carousel">
+    <Box
+      display="flex"
+      width={1}
+      alignItems="center"
+      id="carousel"
+      data-testid="carousel"
+    >
       <IconButton
         color="white"
         sx={iconButtonSx}
