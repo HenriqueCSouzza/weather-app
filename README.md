@@ -12,7 +12,7 @@ O WeatherApp foi criado para mostrar o clima, onde tras os seguintes dados:
 - Horário do por do sol
 - Horário onde se tem mais movimentação humana (Golden hour)
 
----
+## Acesse o [WeatherApp](https://weather-app-022.netlify.app/)
 
 ## 1. Primeiros passos
 
