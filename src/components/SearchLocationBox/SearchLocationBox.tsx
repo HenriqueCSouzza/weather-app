@@ -19,7 +19,6 @@ export default function SearchLocationBox({
     setIsInputVisible(() => !isInputVisible)
   }
 
-  console.log(isInputVisible)
   return (
     <Box
       width="100%"

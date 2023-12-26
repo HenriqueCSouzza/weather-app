@@ -11,7 +11,7 @@ export function parseTimeString(timeString: string) {
     Number(minutes),
     Number(seconds)
   )
-  console.log(formattedTime, parsedDate)
+  console.log(formattedTime)
   if (!isNaN(parsedDate.getTime())) {
     return parsedDate
   } else {

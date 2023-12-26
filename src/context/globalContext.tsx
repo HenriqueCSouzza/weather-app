@@ -75,7 +75,6 @@ export function GlobalContext({ children }: { children: React.ReactNode }) {
       })
 
       if (data) {
-        console.log({ data })
         setForecast(data)
         setWeather(data?.list[0])
       }
